@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威廉希尔 · 快速识别与产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f4f5f7;
+            color: #1e1e2a;
+            line-height: 1.7;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(145deg, #0b0c10 0%, #1e1f2b 100%);
+            padding: 4.5rem 1.5rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            right: -60px;
+            top: -30px;
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle at 30% 40%, rgba(0, 180, 255, 0.08), transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            color: #eaeef2;
+            margin-bottom: 0.65rem;
+        }
+
+        .hero .sub {
+            font-size: 1.15rem;
+            color: #a8b2c1;
+            max-width: 640px;
+            margin: 0.5rem auto 0;
+            line-height: 1.6;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            margin-top: 1.8rem;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 0.35rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            color: #bcc5d4;
+            letter-spacing: 0.02em;
+        }
+
+        /* 浅色正文区 */
+        .content {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 3rem 1.8rem 5rem;
+        }
+
+        .intro-block {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2.2rem 2.5rem;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.03);
+            margin-bottom: 2.8rem;
+        }
+
+        .intro-block p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .intro-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.8rem;
+            margin: 2rem 0 2.2rem;
+        }
+
+        .highlight-item {
+            background: #f8f9fc;
+            border-radius: 20px;
+            padding: 1.5rem 1.2rem;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .highlight-item:hover {
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+            transform: translateY(-2px);
+        }
+
+        .highlight-item .icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.4rem;
+            display: inline-block;
+        }
+
+        .highlight-item h3 {
+            font-size: 1.1rem;
+            font-weight: 540;
+            margin-bottom: 0.3rem;
+            color: #111;
+        }
+
+        .highlight-item p {
+            font-size: 0.92rem;
+            color: #3f3f50;
+            margin-bottom: 0;
+        }
+
+        .scenario-box {
+            background: #f0f2f5;
+            border-radius: 24px;
+            padding: 1.8rem 2.2rem;
+            margin: 2rem 0 2.2rem;
+        }
+
+        .scenario-box h3 {
+            font-size: 1.2rem;
+            font-weight: 540;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .scenario-box ul {
+            list-style: none;
+            padding-left: 0.2rem;
+        }
+
+        .scenario-box li {
+            padding: 0.3rem 0;
+            display: flex;
+            gap: 0.6rem;
+            align-items: baseline;
+        }
+
+        .scenario-box li::before {
+            content: '·';
+            font-weight: 700;
+            color: #1769aa;
+        }
+
+        .faq-mini {
+            margin: 2.5rem 0 1.8rem;
+            border-top: 1px solid #e2e5ec;
+            padding-top: 2.2rem;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.9rem;
+            border-radius: 18px;
+            background: #ffffff;
+            padding: 0.6rem 1.2rem 0.6rem 1.2rem;
+        }
+
+        .faq-mini summary {
+            font-weight: 520;
+            cursor: pointer;
+            color: #1f2937;
+            padding: 0.3rem 0;
+        }
+
+        .faq-mini details p {
+            margin: 0.6rem 0 0.4rem;
+            color: #2f3a47;
+            font-size: 0.95rem;
+            padding-left: 0.2rem;
+        }
+
+        .note-line {
+            font-size: 0.9rem;
+            background: #f2f4f8;
+            padding: 1.2rem 1.8rem;
+            border-radius: 60px;
+            color: #2c3e50;
+            margin-top: 1.8rem;
+            text-align: center;
+            border: 1px solid #e6e9f0;
+        }
+
+        a {
+            color: #1769aa;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        a:hover {
+            border-bottom-color: #1769aa;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 1.5rem 1rem 2rem;
+            font-size: 0.8rem;
+            color: #6d7380;
+            border-top: 1px solid #e0e3ea;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .content {
+                padding: 1.8rem 1.2rem 4rem;
+            }
+            .intro-block {
+                padding: 1.6rem 1.2rem;
+            }
+            .highlight-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .scenario-box {
+                padding: 1.4rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>威廉希尔 · 一眼识别</h1>
+        <div class="sub">从首页结构快速理解平台用途，不必反复猜测</div>
+        <span class="badge">产品说明式 · 轻量指南</span>
+    </header>
+
+    <main class="content">
+        <div class="intro-block">
+            <p>初次打开一个网站，最直接的需求往往是：「这个网站是做什么的？」。对于<a href="https://real-williamhill.com">威廉希尔</a>而言，页面布局和内容模块已经给出了清晰的答案。它聚焦于体育赛事、实时数据以及多项目娱乐体验，界面中的导航与卡片直接指向核心功能，省去了用户四处翻找的麻烦。</p>
+            <p>整体页面采用信息分层设计，重要入口和动态内容一目了然。无论是查看热门赛事、浏览统计信息，还是了解平台所提供的各类活动，都可以通过首页快速定位。这种直白的产品逻辑降低了新用户的理解成本。</p>
+        </div>
+
+        <div class="highlight-grid">
+            <div class="highlight-item">
+                <div class="icon">📊</div>
+                <h3>实时动态</h3>
+                <p>首页集中展示当下热门赛事与变化数据，信息滚动更新，保持新鲜感。</p>
+            </div>
+            <div class="highlight-item">
+                <div class="icon">🧩</div>
+                <h3>模块清晰</h3>
+                <p>体育、娱乐、活动等分区明确，每个模块都有独立视觉标识，避免混淆。</p>
+            </div>
+            <div class="highlight-item">
+                <div class="icon">⚡</div>
+                <h3>快速响应</h3>
+                <p>页面加载后即可开始浏览主要区域，无需多余等待或注册前置。</p>
+            </div>
+            <div class="highlight-item">
+                <div class="icon">📱</div>
+                <h3>多端适配</h3>
+                <p>从桌面到移动设备，内容布局自动调整，保持可读性与操作便利。</p>
+            </div>
+        </div>
+
+        <div class="scenario-box">
+            <h3>🧭 哪些场景下你可能需要它</h3>
+            <ul>
+                <li>你想快速浏览当前有哪些重点体育赛事以及对应状态</li>
+                <li>你希望在一个页面内纵览多种娱乐选项，而不必在二级菜单里反复跳转</li>
+                <li>你习惯先用首页判断网站的信息密度和风格，再决定是否深入探索</li>
+                <li>你倾向于选择信息架构直接、没有过度包装的平台</li>
+            </ul>
+        </div>
+
+        <div class="faq-mini">
+            <details>
+                <summary>首页会不会信息太密？</summary>
+                <p>首页采用卡片与分区布局，主次分明。高频模块（赛事、热门）置于视觉中心，次要内容折叠或靠下排列。如果你更喜欢极简视图，可以关注导航栏的筛选或分类功能。</p>
+            </details>
+            <details>
+                <summary>需要注册才能看到主要内容吗？</summary>
+                <p>不需要。首页的大部分内容——赛事列表、数据摘要、活动概览——在未登录状态下即可正常浏览。部分个性化功能或操作才需要注册账户。</p>
+            </details>
+        </div>
+
+        <div class="note-line">
+            ⚡ 如果你正在寻找一个界面直接、内容聚焦的娱乐信息平台，<a href="https://real-williamhill.com">威廉希尔</a> 的首页值得花几分钟熟悉。
+        </div>
+    </main>
+
+    <footer class="footer-note">
+        本页仅为产品说明介绍，不构成任何引导或承诺。请根据个人判断使用。
+    </footer>
+</body>
+</html>
